@@ -154,3 +154,96 @@ Want to learn more? Here are some more articles on Storybook Docs:
 - Example: [Storybook Design System](https://github.com/storybookjs/design-system)
 
 Learn more about Storybook at [storybook.js.org](https://storybook.js.org/?ref=readme).
+
+## Basic Usage with Autodocs
+
+```js
+// .storybook/main.js
+export default {
+  addons: ['@storybook/addon-docs'],
+};
+
+// Button.stories.js
+export default {
+  component: Button,
+  tags: ['autodocs'],
+};
+
+Docs me **practical usage examples** bohot value add karte hain.
+
+---
+
+## 2️⃣ Framework-Specific Example Add Karna
+
+Package exports me dekho:
+
+But README usually React example deta hai.
+
+👉 Tum **Angular / Web Components** ka small MDX example add kar sakte ho.
+
+Example section add:
+
+```md
+### Using Docs with Web Components
+
+```js
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Example/MyComponent" />
+
+
+Maintainers LOVE framework parity improvements.
+
+---
+
+## 3️⃣ Broken / Outdated Info Check
+
+Dependencies me React 19 tak support likha hai:
+
+Check docs me kahin React 17 max likha ho —  
+👉 Update to React 19 support mention
+
+Small change = meaningful PR
+
+---
+
+## 4️⃣ Typo / Clarity Fix in Docs Blocks Pages
+
+Docs Blocks like:
+- ArgTypes
+- Canvas
+- Controls
+- Source
+
+Inke explanations kabhi vague hote hain.
+
+Tum improvements kar sakte ho:
+
+❌ “Used to show component props”  
+✅ “Displays automatically generated prop definitions using TypeScript or PropTypes metadata”
+
+Maintainers love clarity PRs.
+
+---
+
+# 🟡 MEDIUM CONTRIBUTIONS (If you want technical work)
+
+## 5️⃣ Improve Error Message
+
+Search in folder:
+
+
+Look for error throws like:
+
+```ts
+throw new Error('No component found');
+
+throw new Error('No component found for Docs. Make sure your story has a `component` field in the default export.');
+
+/**
+ * Extracts component argTypes for rendering in Docs tables.
+ * Supports TS, PropTypes and CSF metadata.
+ */
+
+
+
